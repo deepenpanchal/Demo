@@ -18,29 +18,7 @@
         });
       }
       
-      function create_deeplink(username)
-      {
-        var linkData = {
-        campaign: 'create deeplink',
-        channel: 'website',
-        feature: 'deeplink_test',
-        stage: 'new user',
-        alias: 'login-link',
-        data: 
-          {
-            'user_name': username,
-            'date_now': Date.now(),
-            '$og_title': 'App Download Link',
-            '$og_description': 'This is my app download test',
-            '$og_image_url':'http://lorempixel.com/400/400'
-          }
-        };
-        branch.link(linkData, function(err, link) 
-        {
-          //console.log(link);
-          return link;
-        });
-      }
+      
     </script>
     <style>
       .button {
