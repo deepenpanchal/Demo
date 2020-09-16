@@ -129,6 +129,30 @@
                     function(err) { console.log(err); }
                 );
    }
+      
+    function sendSMS(form) {
+                var phone = form.phone.value;
+                var linkData = {
+                    tags: [],
+                    channel: 'Website',
+                    feature: 'TextMeTheApp',
+                    campaign: 'TextTest',
+                    data: {
+                        'foo': 'bar'
+                    }
+                };
+                var options = {};
+                var callback = function(err, result) {
+                    if (err) {
+                        alert("Sorry, something went wrong.");
+                    }
+                    else {
+                        alert("SMS sent!");
+                    }
+                };
+                branch.sendSMS(phone, linkData, options, callback);
+                form.phone.value = "";
+            }
     
     </script>
     <style>
@@ -152,6 +176,11 @@
       <button onclick="empty_event()">Empty Custom Data</button>
       <a href = "https://branchster.app.link/XYfOBxZZN9"> Open the app </a>
  
+      <form onsubmit="sendSMS(this); return false;">
+            <input id="phone" name="phone" type="tel" placeholder="(650) 123-4567" />
+            <br/>
+            <input type="submit"/>
+        </form>
   </body>
 </html>
 
