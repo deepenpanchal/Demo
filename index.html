@@ -13,10 +13,10 @@
       branch.init('key_live_nmKsJoHPg5wa3iPuN5lqPjlgrva1uBNq');
       function triggerJourneys()
       {
-        branch.track('pageview',
-        {
-           'meta' : 'tags'
-        });
+        //branch.track('pageview',
+        //{
+         //  'meta' : 'tags'
+       // });
       }
       function create_deeplink(username)
       {
@@ -169,7 +169,7 @@
     </head>
     <body>
       <p>Hey Man! <br/></p>
-      <button id="demo" class="button" onclick="triggerJourneys()" >Click Here</button>
+      <button id="demo" class="button" onclick="triggerJourneys()" >Trigger a journey</button>
       <button id="demo" class="button" onclick="create_deeplink('deepen')" >Click Here</button>
       <button onclick="trigger_purchase()">Track Purchase</button>
       <button onclick="empty_event()">Empty Custom Data</button>
