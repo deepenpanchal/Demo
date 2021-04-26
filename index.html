@@ -17,10 +17,8 @@
         {
            'meta' : 'tags'
         });
-      }
-      //branch.addListener('didShowJourney', listener);
-      function doesJourneyExistOnPage() {
-          var elem = document.getElementById("branch-banner-iframe");
+        
+         var elem = document.getElementById("branch-banner-iframe");
           if (elem) {
               alert("Journey is displaying");;
           } 
@@ -28,6 +26,11 @@
           { 
             alert("No Journey");; 
           }
+      }
+      //branch.addListener('didShowJourney', listener);
+      function doesJourneyExistOnPage() {
+         
+      }
 
       function create_deeplink(username)
       {
