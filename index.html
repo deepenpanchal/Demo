@@ -18,6 +18,17 @@
            'meta' : 'tags'
         });
       }
+      //branch.addListener('didShowJourney', listener);
+      function doesJourneyExistOnPage() {
+          var elem = document.getElementById("branch-banner-iframe");
+          if (elem) {
+              alert("Journey is displaying");;
+          } 
+          else
+          { 
+            alert("No Journey");; 
+          }
+
       function create_deeplink(username)
       {
         var linkData = {
